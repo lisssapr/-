@@ -1,0 +1,64 @@
+/* table {
+    border-collapse: collapse;
+  }
+
+  table, td {
+    border: 1px solid black;
+  } */
+
+  /* td {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black; */
+    /* text-align: center; */
+    
+  /* } */
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-gap: 2px;
+  }
+  .cell {
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+/* ЧЕк лист */
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+  #input, #list {
+    display: inline-block;
+  }
+  
+  #list {
+    padding: 0;
+    list-style-type: none;
+  }
+  #list span {
+    margin-right: 5px;
+  }
+  #list .remove, #list .mark {
+    color: blue;
+    cursor: pointer;
+  }
+  #list .remove:hover, #list .mark:hover {
+    text-decoration: underline;
+  }
+  
+  #list .done .task {
+    text-decoration: line-through;
+  }
+
+
+  /*  */
