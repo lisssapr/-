@@ -12,7 +12,7 @@
 //   return cells;
 // }
 
-// let targetCells = generateRandomCells(10); // Генерируем случайные ячейки
+// let targetCells = generateRandomCells(10); 
 
 // let grid = document.getElementById('grid');
 // let cells = [];
@@ -49,10 +49,6 @@
 //     clickedCell.style.backgroundColor = 'red';
 //   }
 // }
-
-
-
-
 
 
 
@@ -104,11 +100,7 @@
 
 
 
-
 //Игра в города против робота на JavaScript
-
-
-
 
 // let robotCities = ['Москва', 'Астана', 'Алматы', 'Екатеринбург', 'Гонконг', 'Гавана', 'Абу-Даби', 'Иркутск', 'Каир'];
 //     let currentPlayer = 1;
@@ -135,7 +127,6 @@
 //       switchPlayer();
 //       cityInput.value = '';
 
-//       // Робот делает свой ход
 //       let robotMove = getRobotMove();
 //       usedCities.push(robotMove);
 //       displayGameState();
@@ -161,15 +152,12 @@
 //       let lastPlayerCity = usedCities[usedCities.length - 1].toLowerCase();
 //       let lastLetter = lastPlayerCity[lastPlayerCity.length - 1];
 
-//       // Робот выбирает город, начинающийся на ту букву, на которую закончился предыдущий город игрока
 //       let availableCities = robotCities.filter(city => !usedCities.includes(city) && city.toLowerCase()[0] === lastLetter);
 
 //       if (availableCities.length === 0) {
 //         alert('Робот не может выбрать город. Игра завершена!');
-//         // Дополнительные действия при завершении игры с роботом (например, начать новую игру)
 //       }
 
-//       // Робот выбирает случайный город из доступных
 //       let randomIndex = Math.floor(Math.random() * availableCities.length);
 //       return availableCities[randomIndex];
 //     }
@@ -190,51 +178,49 @@
 
 // Чеклист на JavaScript и  Кнопки для удаления и завершения в чеклисте на JavaScript  Редактирование дела в чеклисте на JavaScript
 
-let input = document.querySelector('#input');
-let list = document.querySelector('#list');
+// let input = document.querySelector('#input');
+// let list = document.querySelector('#list');
 
-input.addEventListener('keypress', function(event) {
-	if (event.key == 'Enter') {
-		let li = document.createElement('li');
+// input.addEventListener('keypress', function(event) {
+// 	if (event.key == 'Enter') {
+// 		let li = document.createElement('li');
 		
-		let task = document.createElement('span');
-		task.classList.add('task');
-		task.textContent = this.value;
-		task.addEventListener('dblclick', function() {
-			let text = this.textContent;
-			this.textContent = '';
+// 		let task = document.createElement('span');
+// 		task.classList.add('task');
+// 		task.textContent = this.value;
+// 		task.addEventListener('dblclick', function() {
+// 			let text = this.textContent;
+// 			this.textContent = '';
 			
-			let edit = document.createElement('input');
-			edit.value = text;
-			this.appendChild(edit);
+// 			let edit = document.createElement('input');
+// 			edit.value = text;
+// 			this.appendChild(edit);
 			
-			let self = this;
-			edit.addEventListener('keypress', function(event) {
-				if (event.key == 'Enter') {
-					self.textContent = this.value;
-				}
-			});
-		});
-		li.appendChild(task);
+// 			let self = this;
+// 			edit.addEventListener('keypress', function(event) {
+// 				if (event.key == 'Enter') {
+// 					self.textContent = this.value;
+// 				}
+// 			});
+// 		});
+// 		li.appendChild(task);
 		
-		let remove = document.createElement('span');
-		remove.textContent = 'удалить';
-		remove.classList.add('remove');
-		remove.addEventListener('click', function() {
-			this.parentElement.remove();
-		});
-		li.appendChild(remove);
+// 		let remove = document.createElement('span');
+// 		remove.textContent = 'удалить';
+// 		remove.classList.add('remove');
+// 		remove.addEventListener('click', function() {
+// 			this.parentElement.remove();
+// 		});
+// 		li.appendChild(remove);
 		
-		let mark = document.createElement('span');
-		mark.textContent = 'сделано';
-		mark.classList.add('mark');
-		mark.addEventListener('click', function() {
-			this.parentElement.classList.add('done');
-		});
-		li.appendChild(mark);
-		
-		list.appendChild(li);
-		
-		this.value = '';
-	}
-});
+// 		let mark = document.createElement('span');
+// 		mark.textContent = 'сделано';
+// 		mark.classList.add('mark');
+// 		mark.addEventListener('click', function() {
+// 			this.parentElement.classList.add('done');
+// 		});
+// 		li.appendChild(mark);
+// 		list.appendChild(li);
+// 		this.value = '';
+// 	}
+// });
